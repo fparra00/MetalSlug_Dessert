@@ -20,7 +20,7 @@ public class LogicalMarco : MonoBehaviour
     private float x, y;
 
     [Header("Animations")]
-    private bool isRunning, isJumping, isGrounded;
+    private bool isRunning, isJumping, isGrounded, isDucking;
 
 
 
@@ -29,6 +29,7 @@ public class LogicalMarco : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
     }
+
     private void FixedUpdate()
     {
         Rigidbody2D.velocity = new Vector2(x * velocity, Rigidbody2D.velocity.y);
@@ -38,14 +39,17 @@ public class LogicalMarco : MonoBehaviour
     {
         //Variables that need recalculation
         recalculateOrientation();
-        isInGround();
 
         //Checks
-        isRunning = x != 0.0f && isGrounded;
+        isRunning = x != 0.0f && isGrounded && !isJumping;
+
+        //Inputs
         isJumping = Input.GetKeyDown(KeyCode.W) && isGrounded ? true : false;
+        isDucking 
 
         //Animator
         Animator.SetBool("isJumping",isJumping);
+        Animator.SetBool("isRunning",isRunning);
 
         //Actions
         if (isJumping) jump();
@@ -64,12 +68,24 @@ public class LogicalMarco : MonoBehaviour
     private void isInGround()
     {
         Debug.DrawRay(transform.position, Vector3.down * 0.5f, Color.red);
-        isGrounded = Physics2D.Raycast(transform.position, Vector3.down, 0.5f) ? true : false;
+        isGrounded = Physics2D.Raycast(transform.position, Vector3.down, 1f) ? true : false;
     }
 
     //Function to Jump
     private void jump()
     {
         Rigidbody2D.AddForce(Vector2.up * jumpForce);
+    }
+
+   
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isGrounded = (collision.gameObject.CompareTag("Floor")) ? true : false;
+    }
+
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isGrounded = (collision.gameObject.CompareTag("Floor")) ? false : true;
     }
 }
