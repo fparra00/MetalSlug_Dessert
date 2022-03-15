@@ -65,6 +65,7 @@
     <Compile Include="Assets\OtherSprites\Vehicles\EnterToArmor.cs" />
     <Compile Include="Assets\OtherSprites\Vehicles\Armor1.cs" />
     <Compile Include="Assets\PreFabs\BulletArmor\bulletArmor.cs" />
+    <Compile Include="Assets\Scripts\Bullets\ArmorBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
