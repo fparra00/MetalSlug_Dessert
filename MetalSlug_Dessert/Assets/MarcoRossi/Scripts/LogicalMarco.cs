@@ -19,10 +19,11 @@ public class LogicalMarco : MonoBehaviour
     private float x, y;
     public static Vector2 direction;
     public static Vector2 directionAbs;
+    public static Renderer renderer;
 
 
     [Header("Static bools to control actions of Marco in Another Scripts")]
-    public static bool isRunning, isJumping, isGrounded, isDucking, isWalkWhileDuck, isShootingWhileDuck, isShooting, isRazing;
+    public static bool isRunning, isJumping, isGrounded, isDucking, isWalkWhileDuck, isShootingWhileDuck, isShooting, isRazing, isInVehicle;
 
 
 
@@ -30,6 +31,7 @@ public class LogicalMarco : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+        renderer = GetComponent<Renderer>();
     }
 
     private void FixedUpdate()
@@ -54,7 +56,7 @@ public class LogicalMarco : MonoBehaviour
         //Inputs
         isJumping = Input.GetKeyDown(KeyCode.W) && isGrounded && !isDucking ? true : false;
         isDucking = Input.GetKey(KeyCode.S);
-        isShooting = Input.GetKeyDown(KeyCode.Space);
+        isShooting = Input.GetKeyDown(KeyCode.Space) && !isInVehicle;
         isRazing = Input.GetKeyDown(KeyCode.F); 
 
         //Animator
@@ -68,7 +70,7 @@ public class LogicalMarco : MonoBehaviour
 
         //Actions
         if (isJumping) jump();
-
+        Debug.Log(isInVehicle);
     }
 
     //Function to recalculate the orientation of Marco in function of his movement

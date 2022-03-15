@@ -19,11 +19,11 @@ public class EnterToArmor : MonoBehaviour
     private void controlArmor()
     {
         armor.enabled = true;
-        Invoke("DisablePlayer", 0.17f);
+        Invoke("DisablePlayer",0f);
     }
 
     private void DisablePlayer()
     {
-        player.SetActive(false);
+        LogicalMarco.renderer.enabled = false;  
     }
 }

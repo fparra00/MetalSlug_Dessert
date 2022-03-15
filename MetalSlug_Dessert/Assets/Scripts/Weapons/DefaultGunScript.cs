@@ -14,8 +14,7 @@ public class DefaultGunScript : MonoBehaviour
 
     void Update()
     {
-        //Input
-        LogicalMarco.isShooting = Input.GetKeyDown(KeyCode.Space) ? true : false;
+
 
         // Checks
         if (LogicalMarco.isShooting && Time.time >= nextShoot)
