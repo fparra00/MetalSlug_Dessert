@@ -25,10 +25,10 @@ public class MeleeAtack : MonoBehaviour
 
         foreach (Collider2D collision in collisions)
         {
-           // if (collision.CompareTag("Enemy"))
-            //{
-
-            //}
+            if (collision.CompareTag("Soldier"))
+            {
+                SoldiersGeneral.hitWithKnife = true;
+            }
         }
     }
 }

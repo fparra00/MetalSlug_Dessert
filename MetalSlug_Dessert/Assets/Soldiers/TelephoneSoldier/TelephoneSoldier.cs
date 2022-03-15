@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TelephoneSoldier : MonoBehaviour
 {
-
+    private bool atackMode;
 
 
     void Start()
@@ -14,12 +14,11 @@ public class TelephoneSoldier : MonoBehaviour
     void Update()
     {
         //Actions
-        if (SoldiersGeneral.seeEnemy) attack();
+        if (SoldiersGeneral.seeEnemy) atackMode=true;
 
-        Debug.Log(SoldiersGeneral.seeEnemy);
     }
 
-    private void attack()
+    private void atack()
     {
     }
 

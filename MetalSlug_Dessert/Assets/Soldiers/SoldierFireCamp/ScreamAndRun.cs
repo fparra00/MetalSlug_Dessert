@@ -5,16 +5,35 @@ using UnityEngine;
 public class ScreamAndRun : MonoBehaviour
 {
     private Animator Animator;
+    private Rigidbody2D Rigidbody2D;
+    private bool screamAndRun;
+
     void Start()
     {
-        Animator = GetComponent<Animator>();    
+        Animator = GetComponent<Animator>();   
+        Rigidbody2D = GetComponent<Rigidbody2D>();  
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Debug.Log(SoldiersGeneral.seeEnemy);
+        //Checks
+        if(SoldiersGeneral.seeEnemy) screamAndRun = true;
+        if (screamAndRun) run();
+   
+    }
 
-        Animator.SetBool("seeEnemy", SoldiersGeneral.seeEnemy);
+    private void run()
+    {
+        if(this.transform.position.x <0.0f) transform.localScale = new Vector3(1.2f, 1.2f, 1f);
+        Rigidbody2D.velocity = new Vector2(1.7f, Rigidbody2D.velocity.y);
+        Animator.SetBool("seeEnemy", true);
+        Invoke("destroySoldier", 2f);
+
+
+    }
+
+    private void destroySoldier()
+    {
+        Destroy(gameObject);
     }
 }

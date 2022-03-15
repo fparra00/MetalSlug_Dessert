@@ -35,7 +35,6 @@ public class LogicalMarco : MonoBehaviour
     private void FixedUpdate()
     {
         Rigidbody2D.velocity = new Vector2(x * velocity, Rigidbody2D.velocity.y);
-
         if (isWalkWhileDuck) Rigidbody2D.velocity = new Vector2(x * velocity/2, Rigidbody2D.velocity.y);
 
     }
