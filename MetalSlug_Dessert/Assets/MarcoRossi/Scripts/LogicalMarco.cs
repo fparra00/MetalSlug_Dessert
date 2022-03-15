@@ -16,11 +16,10 @@ public class LogicalMarco : MonoBehaviour
     [Tooltip("Health of Marco, enter a number between 0 to 10")]
     [SerializeField] private float health;
 
-
     private float x, y;
 
     [Header("Animations")]
-    private bool isRunning, isJumping, isGrounded, isDucking;
+    private bool isRunning, isJumping, isGrounded, isDucking, isWalkWhileDuck;
 
 
 
@@ -41,15 +40,19 @@ public class LogicalMarco : MonoBehaviour
         recalculateOrientation();
 
         //Checks
-        isRunning = x != 0.0f && isGrounded && !isJumping;
+        isRunning = x != 0.0f && isGrounded && !isJumping && !isDucking;
+        isWalkWhileDuck = isDucking && x != 0.0f;
 
         //Inputs
-        isJumping = Input.GetKeyDown(KeyCode.W) && isGrounded ? true : false;
-        isDucking 
+        isJumping = Input.GetKeyDown(KeyCode.W) && isGrounded && !isDucking ? true : false;
+        isDucking = Input.GetKey(KeyCode.S);
+
 
         //Animator
         Animator.SetBool("isJumping",isJumping);
         Animator.SetBool("isRunning",isRunning);
+        Animator.SetBool("isDucking", isDucking);
+        Animator.SetBool("isWalkWhileDuck", isWalkWhileDuck);
 
         //Actions
         if (isJumping) jump();
@@ -64,12 +67,6 @@ public class LogicalMarco : MonoBehaviour
         if (x > 0.0f) transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
-    //Function to check if Marco is in the ground
-    private void isInGround()
-    {
-        Debug.DrawRay(transform.position, Vector3.down * 0.5f, Color.red);
-        isGrounded = Physics2D.Raycast(transform.position, Vector3.down, 1f) ? true : false;
-    }
 
     //Function to Jump
     private void jump()
