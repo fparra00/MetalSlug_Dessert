@@ -58,12 +58,13 @@
     <Compile Include="Assets\Soldiers\SoldierDefault\SoldiersGeneral.cs" />
     <Compile Include="Assets\Soldiers\SoldierFireCamp\ScreamAndRun.cs" />
     <Compile Include="Assets\Scripts\Bullets\DefaultBullet.cs" />
-    <Compile Include="Assets\bloodScr.cs" />
+    <Compile Include="Assets\OtherSprites\SFX\Blood\bloodScr.cs" />
     <Compile Include="Assets\Scripts\Weapons\MeleeAtack.cs" />
     <Compile Include="Assets\Scripts\Weapons\DefaultGunScript.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
-    <Compile Include="Assets\EnterToArmor.cs" />
-    <Compile Include="Assets\Armor1.cs" />
+    <Compile Include="Assets\OtherSprites\Vehicles\EnterToArmor.cs" />
+    <Compile Include="Assets\OtherSprites\Vehicles\Armor1.cs" />
+    <Compile Include="Assets\PreFabs\BulletArmor\bulletArmor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
