@@ -17,9 +17,12 @@ public class LogicalMarco : MonoBehaviour
     [SerializeField] private float health;
 
     private float x, y;
+    public static Vector2 direction;
+    public static Vector2 directionAbs;
 
-    [Header("Animations")]
-    private bool isRunning, isJumping, isGrounded, isDucking, isWalkWhileDuck;
+
+    [Header("Static bools to control actions of Marco in Another Scripts")]
+    public static bool isRunning, isJumping, isGrounded, isDucking, isWalkWhileDuck, isShootingWhileDuck, isShooting, isRazing;
 
 
 
@@ -32,27 +35,37 @@ public class LogicalMarco : MonoBehaviour
     private void FixedUpdate()
     {
         Rigidbody2D.velocity = new Vector2(x * velocity, Rigidbody2D.velocity.y);
+
+        if (isWalkWhileDuck) Rigidbody2D.velocity = new Vector2(x * velocity/2, Rigidbody2D.velocity.y);
+
     }
 
     void Update()
     {
         //Variables that need recalculation
         recalculateOrientation();
+        directionAbs = new Vector2(transform.position.x, transform.position.y);
+
 
         //Checks
         isRunning = x != 0.0f && isGrounded && !isJumping && !isDucking;
         isWalkWhileDuck = isDucking && x != 0.0f;
+        isShootingWhileDuck = isDucking && isShooting;
 
         //Inputs
         isJumping = Input.GetKeyDown(KeyCode.W) && isGrounded && !isDucking ? true : false;
         isDucking = Input.GetKey(KeyCode.S);
-
+        isShooting = Input.GetKeyDown(KeyCode.Space);
+        isRazing = Input.GetKeyDown(KeyCode.F); 
 
         //Animator
         Animator.SetBool("isJumping",isJumping);
         Animator.SetBool("isRunning",isRunning);
         Animator.SetBool("isDucking", isDucking);
         Animator.SetBool("isWalkWhileDuck", isWalkWhileDuck);
+        Animator.SetBool("isShooting", isShooting);
+        Animator.SetBool("isShootingWhileDuck", isShootingWhileDuck);
+        Animator.SetBool("isRazing", isRazing);
 
         //Actions
         if (isJumping) jump();
@@ -63,8 +76,15 @@ public class LogicalMarco : MonoBehaviour
     private void recalculateOrientation()
     {
         x = Input.GetAxisRaw("Horizontal");
-        if(x <0.0f) transform.localScale = new Vector3(-1f, 1f, 1f);
-        if (x > 0.0f) transform.localScale = new Vector3(1f, 1f, 1f);
+        if (x < 0.0f) {
+            transform.localScale = new Vector3(-1.2f, 1.2f, 1f);
+            direction = Vector2.left;
+        }
+        if (x > 0.0f)
+        {
+            transform.localScale = new Vector3(1.2f, 1.2f, 1f);
+            direction = Vector2.right;
+        }
     }
 
 
