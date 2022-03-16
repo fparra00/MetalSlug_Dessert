@@ -8,6 +8,7 @@ TagManager:
   - regularBullet
   - Soldier
   - FloorTrigger
+  - bulletArmor
   layers:
   - Default
   - TransparentFX

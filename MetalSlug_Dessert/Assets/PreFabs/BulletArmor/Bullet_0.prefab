@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5836083109725469126}
   m_Layer: 0
   m_Name: Bullet_0
-  m_TagString: Untagged
+  m_TagString: bulletArmor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,4 +156,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   damage: 0
+  explosionRadio: 0.5
   prExplosion: {fileID: 6543806629164340503, guid: 867faef69865bdb43bd5c73511eb43da, type: 3}

@@ -25,27 +25,31 @@ public class BulletExplosion : MonoBehaviour
         rb.velocity = dirBullet * speed;
     }
 
+    private void explosion()
+    {
 
+        Collider2D[] collisions = Physics2D.OverlapCircleAll(this.transform.position, explosionRadio);
+        foreach (Collider2D collision in collisions)
+        {
+            if (collision.CompareTag("Soldier"))
+            {
+                collision.gameObject.GetComponent<SoldiersGeneral>().hit(2);
+            }
+        }
+
+        Vector3 floorExpl = new Vector3(transform.position.x, transform.position.y + 0.1f, -0.47f);
+        Instantiate(prExplosion, floorExpl, Quaternion.identity);
+        destroyBullet();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other != null)
         {
-            destroyBullet();
-            Vector3 floorExpl = new Vector3(transform.position.x, transform.position.y + 0.1f, -0.47f);
-            Instantiate(prExplosion, floorExpl, Quaternion.identity);
-        }
-
-    
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision != null)
-        {
-
+            explosion();
         }
     }
+
 
     private void destroyBullet()
     {

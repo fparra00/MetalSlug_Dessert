@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,6 @@ public class SoldiersGeneral : MonoBehaviour
     private Animator Animator;
 
     public static bool seeEnemy, isAlive;
-    public bool hitWithKnife;
 
 
     void Start()
@@ -26,17 +26,29 @@ public class SoldiersGeneral : MonoBehaviour
     {
         Invoke("checkEnemy", 0.5f);
         isAlive = (health > 0) ? true : false;
-        if (!isAlive) Invoke("destroySoldier", 2f);
         Animator.SetBool("isAlive", isAlive);
 
+        if (!isAlive) Invoke("destroySoldier", 3f);
 
-        if (hitWithKnife)
-        {
-            health = 0;
-            Animator.SetBool("dieKnife", true);
-        }
     }
 
+
+    public void hit(int opc)
+    {
+        switch (opc)
+        {
+            //Case 1: Hit with Knife
+            case 1:
+                health = 0;
+                Animator.SetBool("dieKnife", true);
+                break;
+            //Case 2: Hit with Armor Bullet
+            case 2:
+                health = 0;
+                Animator.SetBool("dieArmorBullet", true);
+                break;
+        }
+    }
 
     void checkEnemy()
     {
@@ -51,6 +63,7 @@ public class SoldiersGeneral : MonoBehaviour
             bleeding();
             if (health==0) Animator.SetBool("dieRegularBullet", true);
         }
+       
     }
 
     private void bleeding()
@@ -64,8 +77,4 @@ public class SoldiersGeneral : MonoBehaviour
     }
 
 
-    public void jeje()
-    {
-
-    }
 }

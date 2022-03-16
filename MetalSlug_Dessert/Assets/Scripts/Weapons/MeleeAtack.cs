@@ -14,11 +14,7 @@ public class MeleeAtack : MonoBehaviour
         if (LogicalMarco.isRazing) attack();
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(positionKnife.position, radiusKnife);
-    }
+
     private void attack()
     {
         Collider2D[] collisions = Physics2D.OverlapCircleAll(positionKnife.position, radiusKnife);
@@ -27,7 +23,7 @@ public class MeleeAtack : MonoBehaviour
         {
             if (collision.CompareTag("Soldier"))
             {
-                collision.gameObject.GetComponent<SoldiersGeneral>().hitWithKnife = true;
+                collision.gameObject.GetComponent<SoldiersGeneral>().hit(1);
 
             }
         }

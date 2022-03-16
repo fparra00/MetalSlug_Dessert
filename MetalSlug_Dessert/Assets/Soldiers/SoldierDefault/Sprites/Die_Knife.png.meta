@@ -22,22 +22,22 @@ TextureImporter:
     second: Die_Knife_6
   - first:
       213: -8092415258973780932
-    second: Die_Knife_7
+    second: Die_Knife_20
   - first:
       213: -5065673828431231110
     second: Die_Knife_9
   - first:
       213: 538835769221442536
-    second: Die_Knife_10
+    second: Die_Knife_21
   - first:
       213: 3392747300611369908
-    second: Die_Knife_11
+    second: Die_Knife_22
   - first:
       213: 3429421085578959370
-    second: Die_Knife_12
+    second: Die_Knife_23
   - first:
       213: -7610338669834759700
-    second: Die_Knife_13
+    second: Die_Knife_24
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -145,7 +145,7 @@ TextureImporter:
         x: 5
         y: 4
         width: 38
-        height: 45
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,7 +166,7 @@ TextureImporter:
         x: 47
         y: 4
         width: 47
-        height: 40
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,7 +187,7 @@ TextureImporter:
         x: 98
         y: 4
         width: 45
-        height: 39
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,7 +208,7 @@ TextureImporter:
         x: 149
         y: 4
         width: 42
-        height: 39
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,7 +229,7 @@ TextureImporter:
         x: 195
         y: 4
         width: 46
-        height: 38
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,7 +250,7 @@ TextureImporter:
         x: 245
         y: 3
         width: 49
-        height: 39
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,13 +265,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Die_Knife_7
+      name: Die_Knife_20
       rect:
         serializedVersion: 2
         x: 362
         y: 4
         width: 54
-        height: 36
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,7 +292,7 @@ TextureImporter:
         x: 298
         y: 4
         width: 50
-        height: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,13 +307,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Die_Knife_10
+      name: Die_Knife_21
       rect:
         serializedVersion: 2
         x: 421
         y: 2
         width: 53
-        height: 24
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,13 +328,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Die_Knife_11
+      name: Die_Knife_22
       rect:
         serializedVersion: 2
         x: 480
         y: 3
         width: 53
-        height: 20
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,13 +349,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Die_Knife_12
+      name: Die_Knife_23
       rect:
         serializedVersion: 2
         x: 544
         y: 4
         width: 48
-        height: 9
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,13 +370,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Die_Knife_13
+      name: Die_Knife_24
       rect:
         serializedVersion: 2
         x: 603
         y: 4
         width: 48
-        height: 9
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

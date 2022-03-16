@@ -6,7 +6,7 @@ public class Armor1 : MonoBehaviour
 {
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
-    private BoxCollider2D Collider;
+    private CapsuleCollider2D Collider;
 
     [SerializeField] private float velocity;
     [SerializeField] private GameObject prBullet;
@@ -16,7 +16,7 @@ public class Armor1 : MonoBehaviour
     [SerializeField] private Transform gunPosition;
 
 
-    private bool isIdleUp, isShooting, isFlying;
+    private bool isIdleUp, isShooting, isFlying, exitVehicle;
     private float x;
 
 
@@ -24,6 +24,7 @@ public class Armor1 : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
+        Collider = GetComponent<CapsuleCollider2D>();   
         Animator.SetBool("enterToArmor", true);
         LogicalMarco.isInVehicle = true;    
     }
@@ -39,15 +40,16 @@ public class Armor1 : MonoBehaviour
         if (isShooting) shoot();
         if (isFlying) fly();
         if (isFlying && !isIdleUp) isIdleUp = true;
+        if (exitVehicle) exitArmor();
 
         //Inputs
         isShooting = Input.GetKeyDown(KeyCode.Space);
+        exitVehicle = Input.GetKeyDown(KeyCode.E);
         isFlying = Input.GetKey(KeyCode.W);
 
         //Animator
         Animator.SetBool("isIdle", isIdleUp);
         Animator.SetBool("isFlying", isFlying);
-
         }
 
 
@@ -67,8 +69,20 @@ public class Armor1 : MonoBehaviour
         Instantiate(prBullet, gunPosition.position, gunPosition.rotation);
     }
 
+    private void exitArmor()
+    {
+        Destroy(Collider);
+        this.enabled = false;
+        LogicalMarco.renderer.enabled = true;
+        LogicalMarco.isInVehicle = false;
+        Vector3 e = new Vector3(-5f, 1f, -0.47f);
+        Destroy(Rigidbody2D);
+        MarcoMovement.transform.position = e;
+ 
+    }
+
     private void fly()
     {
-        Rigidbody2D.AddForce(Vector2.up * 5);
+        Rigidbody2D.AddForce(Vector2.up * 1.5f);
     }
 }
