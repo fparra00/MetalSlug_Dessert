@@ -70,7 +70,6 @@ public class LogicalMarco : MonoBehaviour
 
         //Actions
         if (isJumping) jump();
-        Debug.Log(isInVehicle);
     }
 
     //Function to recalculate the orientation of Marco in function of his movement

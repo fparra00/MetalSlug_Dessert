@@ -55,17 +55,19 @@
   <ItemGroup>
     <Compile Include="Assets\MarcoRossi\Scripts\LogicalMarco.cs" />
     <Compile Include="Assets\Soldiers\TelephoneSoldier\TelephoneSoldier.cs" />
-    <Compile Include="Assets\Soldiers\SoldierDefault\SoldiersGeneral.cs" />
+    <Compile Include="Assets\OtherSprites\Vehicles\EnterToArmor.cs" />
+    <Compile Include="Assets\OtherSprites\Vehicles\Armor1.cs" />
+    <Compile Include="Assets\Soldiers\SoldierDefault\Scripts\SoldiersGeneral.cs" />
     <Compile Include="Assets\Soldiers\SoldierFireCamp\ScreamAndRun.cs" />
+    <Compile Include="Assets\Scripts\Bullets\ArmorBullet.cs" />
     <Compile Include="Assets\Scripts\Bullets\DefaultBullet.cs" />
     <Compile Include="Assets\OtherSprites\SFX\Blood\bloodScr.cs" />
     <Compile Include="Assets\Scripts\Weapons\MeleeAtack.cs" />
     <Compile Include="Assets\Scripts\Weapons\DefaultGunScript.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
-    <Compile Include="Assets\OtherSprites\Vehicles\EnterToArmor.cs" />
-    <Compile Include="Assets\OtherSprites\Vehicles\Armor1.cs" />
-    <Compile Include="Assets\PreFabs\BulletArmor\bulletArmor.cs" />
-    <Compile Include="Assets\Scripts\Bullets\ArmorBullet.cs" />
+    <Compile Include="Assets\PreFabs\BulletArmor\BulletExplosion.cs" />
+    <Compile Include="Assets\PreFabs\BulletArmor\FireBulletArmor.cs" />
+    <Compile Include="Assets\PreFabs\BulletArmor\ExplosionBulletScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

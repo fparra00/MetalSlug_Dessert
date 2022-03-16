@@ -16,6 +16,7 @@ public class TelephoneSoldier : MonoBehaviour
         //Actions
         if (SoldiersGeneral.seeEnemy) atackMode=true;
 
+
     }
 
     private void atack()

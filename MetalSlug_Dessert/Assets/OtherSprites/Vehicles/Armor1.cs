@@ -17,7 +17,7 @@ public class Armor1 : MonoBehaviour
     [SerializeField] private Transform gunPosition;
 
 
-    private bool isIdleUp, isShooting;
+    private bool isIdleUp, isShooting, isFlying;
     private float x;
 
 
@@ -36,15 +36,20 @@ public class Armor1 : MonoBehaviour
         MarcoMovement.transform.position = spotMarco.transform.position;
 
         //Checks
-        isIdleUp = (x != 0.0f) ? false : true;
+        isIdleUp = (x == 0.0f) ? true : false;
         if (isShooting) shoot();
+        if (isFlying) fly();
+        if (isFlying && !isIdleUp) isIdleUp = true;
 
         //Inputs
         isShooting = Input.GetKeyDown(KeyCode.Space);
+        isFlying = Input.GetKey(KeyCode.W);
 
         //Animator
         Animator.SetBool("isIdle", isIdleUp);
-    }
+        Animator.SetBool("isFlying", isFlying);
+
+        }
 
 
 
@@ -59,8 +64,12 @@ public class Armor1 : MonoBehaviour
 
     private void shoot()
     {
-        Instantiate(shootExplosion, gunPosition.position, gunPosition.rotation);
+        Instantiate(shootExplosion, gunPosition.position,Quaternion.identity);
         Instantiate(prBullet, gunPosition.position, gunPosition.rotation);
+    }
 
+    private void fly()
+    {
+        Rigidbody2D.AddForce(Vector2.up * jumpForce);
     }
 }

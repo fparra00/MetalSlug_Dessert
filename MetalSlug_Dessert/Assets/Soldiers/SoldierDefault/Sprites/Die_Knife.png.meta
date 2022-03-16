@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 5dc35c27863065e428e3332503837821
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2110520426342184694
+    second: Die_Knife_0
+  - first:
+      213: -6798022660540998320
+    second: Die_Knife_1
+  - first:
+      213: -2161705994752754658
+    second: Die_Knife_2
+  - first:
+      213: -2317407073387608228
+    second: Die_Knife_4
+  - first:
+      213: -7732920605507064997
+    second: Die_Knife_5
+  - first:
+      213: 8720012049525709424
+    second: Die_Knife_6
+  - first:
+      213: -8092415258973780932
+    second: Die_Knife_7
+  - first:
+      213: -5065673828431231110
+    second: Die_Knife_9
+  - first:
+      213: 538835769221442536
+    second: Die_Knife_10
+  - first:
+      213: 3392747300611369908
+    second: Die_Knife_11
+  - first:
+      213: 3429421085578959370
+    second: Die_Knife_12
+  - first:
+      213: -7610338669834759700
+    second: Die_Knife_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +68,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,7 +77,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +111,285 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Die_Knife_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6f45f45231a4d10800000000000000
+      internalID: 2110520426342184694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_Knife_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 4
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05dd56f586298a1a0800000000000000
+      internalID: -6798022660540998320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_Knife_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 4
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1cfde9d9d31002e0800000000000000
+      internalID: -2161705994752754658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_Knife_4
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 4
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5701ce7b8ae6dfd0800000000000000
+      internalID: -2317407073387608228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_Knife_5
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 4
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5be3781ea52fa490800000000000000
+      internalID: -7732920605507064997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_Knife_6
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 3
+        width: 49
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a1b1922c4b30970800000000000000
+      internalID: 8720012049525709424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_Knife_7
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 4
+        width: 54
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34cae98237f1bf80800000000000000
+      internalID: -8092415258973780932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_Knife_9
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 4
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a770d5cfd7c13b9b0800000000000000
+      internalID: -5065673828431231110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_Knife_10
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 2
+        width: 53
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebe7b8f6445a7700800000000000000
+      internalID: 538835769221442536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_Knife_11
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 3
+        width: 53
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb2b91c1b5751f20800000000000000
+      internalID: 3392747300611369908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_Knife_12
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 4
+        width: 48
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a1b27be40c79f20800000000000000
+      internalID: 3429421085578959370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_Knife_13
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 4
+        width: 48
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce194141d45a26690800000000000000
+      internalID: -7610338669834759700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

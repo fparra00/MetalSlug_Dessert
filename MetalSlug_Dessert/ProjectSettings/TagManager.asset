@@ -7,6 +7,7 @@ TagManager:
   - Floor
   - regularBullet
   - Soldier
+  - FloorTrigger
   layers:
   - Default
   - TransparentFX
