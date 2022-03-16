@@ -230,6 +230,7 @@ MonoBehaviour:
   health: 2
   bloodPrefab: {fileID: 3566789689005031805, guid: 12b8f372474be7a4aad755fbb818d7fa, type: 3}
   bloodSpot: {fileID: 5330909794115658459}
+  hitWithKnife: 0
 --- !u!70 &5330909794925113856
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -266,4 +267,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

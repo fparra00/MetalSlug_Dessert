@@ -9,7 +9,6 @@ public class Armor1 : MonoBehaviour
     private BoxCollider2D Collider;
 
     [SerializeField] private float velocity;
-    [SerializeField] private float jumpForce;
     [SerializeField] private GameObject prBullet;
     [SerializeField] private GameObject MarcoMovement;
     [SerializeField] private GameObject shootExplosion;
@@ -70,6 +69,6 @@ public class Armor1 : MonoBehaviour
 
     private void fly()
     {
-        Rigidbody2D.AddForce(Vector2.up * jumpForce);
+        Rigidbody2D.AddForce(Vector2.up * 5);
     }
 }

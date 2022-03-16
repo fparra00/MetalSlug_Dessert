@@ -27,7 +27,8 @@ public class MeleeAtack : MonoBehaviour
         {
             if (collision.CompareTag("Soldier"))
             {
-                SoldiersGeneral.hitWithKnife = true;
+                collision.gameObject.GetComponent<SoldiersGeneral>().hitWithKnife = true;
+
             }
         }
     }

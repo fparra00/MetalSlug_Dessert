@@ -5,13 +5,14 @@ using UnityEngine;
 public class SoldiersGeneral : MonoBehaviour
 {
     [SerializeField] private float visionRange;
-    [SerializeField] private float health;
+    [SerializeField] private  float health;
     [SerializeField] private GameObject bloodPrefab;
     [SerializeField] private Transform bloodSpot;
 
     private Animator Animator;
 
-    public static bool seeEnemy, isAlive, hitWithKnife;
+    public static bool seeEnemy, isAlive;
+    public bool hitWithKnife;
 
 
     void Start()
@@ -26,12 +27,13 @@ public class SoldiersGeneral : MonoBehaviour
         Invoke("checkEnemy", 0.5f);
         isAlive = (health > 0) ? true : false;
         if (!isAlive) Invoke("destroySoldier", 2f);
+        Animator.SetBool("isAlive", isAlive);
 
 
         if (hitWithKnife)
         {
             health = 0;
-            Die(2);
+            Animator.SetBool("dieKnife", true);
         }
     }
 
@@ -41,28 +43,13 @@ public class SoldiersGeneral : MonoBehaviour
         seeEnemy = (this.transform.position.x + -(visionRange) > LogicalMarco.directionAbs.x) ? false : true;
     }
 
-    void Die(int opc)
-    {
-        switch (opc)
-        {
-            //Opc1: Die with normal Bullet
-            case 1:
-                Debug.Log("Muerte por disparo");
-                Animator.SetBool("dieRegularBullet", true);
-                break;
-            //Opc2: Die with a Knife
-            case 2:
-                Debug.Log("Muerte por cuchillo");
-                break;
-        }
 
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("regularBullet")){
             health--;
             bleeding();
-            if (health==0) Die(1);
+            if (health==0) Animator.SetBool("dieRegularBullet", true);
         }
     }
 
@@ -77,4 +64,8 @@ public class SoldiersGeneral : MonoBehaviour
     }
 
 
+    public void jeje()
+    {
+
+    }
 }

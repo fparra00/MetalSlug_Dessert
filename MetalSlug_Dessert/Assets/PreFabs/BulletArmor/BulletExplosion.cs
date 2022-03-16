@@ -6,6 +6,7 @@ public class BulletExplosion : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float damage;
+    [SerializeField] private float explosionRadio;
     [SerializeField] private GameObject prExplosion;
 
 
@@ -24,10 +25,7 @@ public class BulletExplosion : MonoBehaviour
         rb.velocity = dirBullet * speed;
     }
 
-    private void destroyBullet()
-    {
-        Destroy(gameObject);
-    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -38,10 +36,7 @@ public class BulletExplosion : MonoBehaviour
             Instantiate(prExplosion, floorExpl, Quaternion.identity);
         }
 
-        if (other.CompareTag("FloorTrigger"))
-        {
-           
-        }
+    
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -50,5 +45,10 @@ public class BulletExplosion : MonoBehaviour
         {
 
         }
+    }
+
+    private void destroyBullet()
+    {
+        Destroy(gameObject);
     }
 }
