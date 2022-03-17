@@ -16,17 +16,14 @@ public class Armor1 : MonoBehaviour
     [SerializeField] private Transform gunPosition;
 
 
-    private bool isIdleUp, isShooting, isFlying, exitVehicle;
-    private float x;
-    private Renderer renderer;
-
+    private bool isIdleUp, isShooting, isFlying, exitVehicle, isGrounded;
+    private float x,y;
 
     void Start()
     {
         Animator = GetComponent<Animator>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Collider = GetComponent<CapsuleCollider2D>(); 
-        renderer = GetComponent<Renderer>();
         Animator.SetBool("enterToArmor", true);
         LogicalMarco.isInVehicle = true;    
     }
@@ -35,14 +32,14 @@ public class Armor1 : MonoBehaviour
     {
         //Recalculate
         Invoke("rotateArmorAndMovement", 2f);
-        MarcoMovement.transform.position = spotMarco.transform.position;
 
         //Checks
         isIdleUp = (x == 0.0f) ? true : false;
         if (isShooting) shoot();
         if (isFlying) fly();
         if (isFlying && !isIdleUp) isIdleUp = true;
-        if (exitVehicle) exitArmor();
+        if (exitVehicle && isGrounded) exitArmor();
+        if(!LogicalMarco.isInVehicle) MarcoMovement.transform.position = spotMarco.transform.position;
 
         //Inputs
         isShooting = Input.GetKeyDown(KeyCode.Space);
@@ -76,22 +73,35 @@ public class Armor1 : MonoBehaviour
         Animator.SetBool("exitVehicle", exitVehicle);
         LogicalMarco.isInVehicle = false;
         Destroy(Rigidbody2D);
+        MarcoMovement.transform.position = this.transform.position;
+        spotMarco.transform.position = new Vector3(spotMarco.transform.position.x+1f, spotMarco.transform.position.y + 0.30f, spotMarco.transform.position.z);
+
         Invoke("destroyArmor", 2f);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isGrounded = (collision.gameObject.CompareTag("Floor")) ? true : false;
+    }
+
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isGrounded = (collision.gameObject.CompareTag("Floor")) ? false : true;
+    }
+
+    void OnDrawGizmos()
+    {            
+    }
+
+
     private void destroyArmor()
     {
-        LogicalMarco.renderer.enabled = true;
-
-        Invoke("destroyObject", 1f);
-    }
-
-    private void destroyObject()
-    {
         Destroy(gameObject);
+        LogicalMarco.renderer.enabled = true;
     }
 
-    
+
 
     private void fly()
     {

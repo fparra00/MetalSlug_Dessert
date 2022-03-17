@@ -9,7 +9,6 @@ public class BulletExplosion : MonoBehaviour
     [SerializeField] private float explosionRadio;
     [SerializeField] private GameObject prExplosion;
 
-
     private Rigidbody2D rb;
     private Vector2 dirBullet;
 
@@ -46,10 +45,10 @@ public class BulletExplosion : MonoBehaviour
         if (other != null)
         {
             explosion();
+            destroyBullet();
         }
     }
 
-   
 
     private void destroyBullet()
     {
