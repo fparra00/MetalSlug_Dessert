@@ -19,7 +19,6 @@ public class ScreamAndRun : MonoBehaviour
         //Checks
         if(SoldiersGeneral.seeEnemy) screamAndRun = true;
         if (screamAndRun) run();
-   
     }
 
     private void run()
@@ -28,8 +27,6 @@ public class ScreamAndRun : MonoBehaviour
         Rigidbody2D.velocity = new Vector2(1.7f, Rigidbody2D.velocity.y);
         Animator.SetBool("seeEnemy", true);
         Invoke("destroySoldier", 2f);
-
-
     }
 
     private void destroySoldier()

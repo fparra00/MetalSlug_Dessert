@@ -41,6 +41,7 @@ public class Armor1 : MonoBehaviour
         if (exitVehicle && isGrounded) exitArmor();
         if(!LogicalMarco.isInVehicle) MarcoMovement.transform.position = spotMarco.transform.position;
 
+
         //Inputs
         isShooting = Input.GetKeyDown(KeyCode.Space);
         exitVehicle = Input.GetKeyDown(KeyCode.E);
@@ -90,21 +91,17 @@ public class Armor1 : MonoBehaviour
         isGrounded = (collision.gameObject.CompareTag("Floor")) ? false : true;
     }
 
-    void OnDrawGizmos()
-    {            
-    }
-
 
     private void destroyArmor()
     {
-        Destroy(gameObject);
         LogicalMarco.renderer.enabled = true;
+        Destroy(gameObject);
     }
 
 
 
     private void fly()
     {
-        Rigidbody2D.AddForce(Vector2.up * 1.5f);
+        Rigidbody2D.AddForce(Vector2.up * 1.1f);
     }
 }

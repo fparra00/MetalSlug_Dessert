@@ -24,12 +24,14 @@ public class SoldiersGeneral : MonoBehaviour
 
     void FixedUpdate()
     {
-        Invoke("checkEnemy", 0.5f);
-        isAlive = (health > 0) ? true : false;
-        Animator.SetBool("isAlive", isAlive);
 
+        //Checks
+        isAlive = (health > 0) ? true : false;
+        Invoke("checkEnemy", 0.5f);
         if (!isAlive) Invoke("destroySoldier", 3f);
 
+        //Animations
+        Animator.SetBool("isAlive", isAlive);
     }
 
 
@@ -74,6 +76,4 @@ public class SoldiersGeneral : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-
 }
