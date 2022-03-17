@@ -27,7 +27,6 @@ public class BulletExplosion : MonoBehaviour
 
     private void explosion()
     {
-
         Collider2D[] collisions = Physics2D.OverlapCircleAll(this.transform.position, explosionRadio);
         foreach (Collider2D collision in collisions)
         {
@@ -37,7 +36,7 @@ public class BulletExplosion : MonoBehaviour
             }
         }
 
-        Vector3 floorExpl = new Vector3(transform.position.x, transform.position.y + 0.1f, -0.47f);
+        Vector3 floorExpl = new Vector3(transform.position.x, transform.position.y + 0.1f, -1f);
         Instantiate(prExplosion, floorExpl, Quaternion.identity);
         destroyBullet();
     }
@@ -50,6 +49,7 @@ public class BulletExplosion : MonoBehaviour
         }
     }
 
+   
 
     private void destroyBullet()
     {

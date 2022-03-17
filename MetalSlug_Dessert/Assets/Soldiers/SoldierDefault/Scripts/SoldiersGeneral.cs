@@ -63,7 +63,6 @@ public class SoldiersGeneral : MonoBehaviour
             bleeding();
             if (health==0) Animator.SetBool("dieRegularBullet", true);
         }
-       
     }
 
     private void bleeding()

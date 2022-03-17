@@ -18,13 +18,15 @@ public class Armor1 : MonoBehaviour
 
     private bool isIdleUp, isShooting, isFlying, exitVehicle;
     private float x;
+    private Renderer renderer;
 
 
     void Start()
     {
         Animator = GetComponent<Animator>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
-        Collider = GetComponent<CapsuleCollider2D>();   
+        Collider = GetComponent<CapsuleCollider2D>(); 
+        renderer = GetComponent<Renderer>();
         Animator.SetBool("enterToArmor", true);
         LogicalMarco.isInVehicle = true;    
     }
@@ -71,15 +73,25 @@ public class Armor1 : MonoBehaviour
 
     private void exitArmor()
     {
-        Destroy(Collider);
-        this.enabled = false;
-        LogicalMarco.renderer.enabled = true;
+        Animator.SetBool("exitVehicle", exitVehicle);
         LogicalMarco.isInVehicle = false;
-        Vector3 e = new Vector3(-5f, 1f, -0.47f);
         Destroy(Rigidbody2D);
-        MarcoMovement.transform.position = e;
- 
+        Invoke("destroyArmor", 2f);
     }
+
+    private void destroyArmor()
+    {
+        LogicalMarco.renderer.enabled = true;
+
+        Invoke("destroyObject", 1f);
+    }
+
+    private void destroyObject()
+    {
+        Destroy(gameObject);
+    }
+
+    
 
     private void fly()
     {
