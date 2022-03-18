@@ -21,11 +21,8 @@ public class LogicalMarco : MonoBehaviour
     public static Vector2 directionAbs;
     public static Renderer renderer;
 
-
     [Header("Static bools to control actions of Marco in Another Scripts")]
     public static bool isRunning, isJumping, isGrounded, isDucking, isWalkWhileDuck, isShootingWhileDuck, isShooting, isRazing, isInVehicle;
-
-
 
     void Start()
     {
@@ -38,7 +35,6 @@ public class LogicalMarco : MonoBehaviour
     {
         Rigidbody2D.velocity = new Vector2(x * velocity, Rigidbody2D.velocity.y);
         if (isWalkWhileDuck) Rigidbody2D.velocity = new Vector2(x * velocity/2, Rigidbody2D.velocity.y);
-
     }
 
     void Update()
@@ -46,7 +42,6 @@ public class LogicalMarco : MonoBehaviour
         //Variables that need recalculation
         recalculateOrientation();
         directionAbs = new Vector2(transform.position.x, transform.position.y);
-
 
         //Checks
         isRunning = x != 0.0f && isGrounded && !isJumping && !isDucking;
@@ -94,13 +89,13 @@ public class LogicalMarco : MonoBehaviour
         Rigidbody2D.AddForce(Vector2.up * jumpForce);
     }
 
-   
+   //onCollisionEnter
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = (collision.gameObject.CompareTag("Floor")) ? true : false;
     }
 
-
+    //onCollisionExit
     private void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = (collision.gameObject.CompareTag("Floor")) ? false : true;

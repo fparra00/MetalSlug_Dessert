@@ -5,6 +5,8 @@ using UnityEngine;
 public class DefaultGunScript : MonoBehaviour
 {
 
+    [Header("Internal Variables")]
+    [Tooltip("Velocity of Marco, enter a number between 0 to 10")]
     [SerializeField] private Transform gunPosition;
     [SerializeField] private GameObject bullet;
     [SerializeField] private float cooldownShot;
@@ -14,15 +16,12 @@ public class DefaultGunScript : MonoBehaviour
 
     void Update()
     {
-
-
         // Checks
         if (LogicalMarco.isShooting && Time.time >= nextShoot)
         {
             shoot();
             nextShoot = Time.time + cooldownShot;
         }
-
     }
 
 

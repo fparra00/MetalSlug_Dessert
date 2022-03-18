@@ -13,14 +13,10 @@ public class TelephoneSoldier : MonoBehaviour
 
     void Update()
     {
-        //Actions
-        if (SoldiersGeneral.seeEnemy) atackMode=true;
 
 
     }
 
-    private void atack()
-    {
-    }
+
 
 }
