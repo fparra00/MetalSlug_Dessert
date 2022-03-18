@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Weapons\DefaultGunScript.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\OtherSprites\Vehicles\InArmor.cs" />
+    <Compile Include="Assets\Soldiers\RunSoldier\RunSoldier.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

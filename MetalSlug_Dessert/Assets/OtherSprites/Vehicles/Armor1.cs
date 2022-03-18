@@ -38,6 +38,7 @@ public class Armor1 : MonoBehaviour
         if (isShooting) shoot();
         if (isFlying) fly();
         if (isFlying && !isIdleUp) isIdleUp = true;
+        if (isFlying && !isIdleUp) isFlying=true;
         if (exitVehicle && isGrounded) exitArmor();
         if(!LogicalMarco.isInVehicle) MarcoMovement.transform.position = spotMarco.transform.position;
 
