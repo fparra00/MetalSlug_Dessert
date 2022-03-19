@@ -20,7 +20,6 @@ public class SoldierGunScript : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(Animator.GetBool("shoot"));
         // Checks
         if (RunSoldier.seeMarco && Time.time >= nextShoot)
         {

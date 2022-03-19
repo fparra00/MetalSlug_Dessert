@@ -7,20 +7,29 @@ public class ScreamAndRun : MonoBehaviour
     //Components
     private Animator Animator;
     private Rigidbody2D Rigidbody2D;
-    private bool screamAndRun;
+    //Auxiliar Variables
+    private bool screamAndRun, seeEnemy;
+    private float visionRange;
 
     void Start()
     {
         //Initialize Components
         Animator = GetComponent<Animator>();   
         Rigidbody2D = GetComponent<Rigidbody2D>();  
+        //Initialize Variables
+        seeEnemy = false;
+        screamAndRun = false;
+        visionRange = 2f;
     }
 
     void Update()
     {
+        //Recalculate
+        checkEnemy();
         //Checks
-        if(SoldiersGeneral.seeEnemy) screamAndRun = true;
+        if(seeEnemy) screamAndRun = true;
         if (screamAndRun) run();
+        Debug.Log(seeEnemy);
     }
 
     //Function to Run if See Marco
@@ -36,4 +45,10 @@ public class ScreamAndRun : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    void checkEnemy()
+    {
+        seeEnemy = (this.transform.position.x + -(visionRange) > LogicalMarco.directionAbs.x) ? false : true;
+    }
+
 }
