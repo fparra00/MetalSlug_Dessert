@@ -11,12 +11,16 @@ public class SoldiersGeneral : MonoBehaviour
     [SerializeField] private Transform bloodSpot;
 
     private Animator Animator;
+    private Rigidbody2D Rigidbody2D;
+    private CapsuleCollider2D capsuleCollider;
 
     public static bool seeEnemy, isAlive;
 
 
     void Start()
     {
+        Rigidbody2D = GetComponent<Rigidbody2D>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();    
         Animator = GetComponent<Animator>();
         seeEnemy = false;
         isAlive = true;
@@ -24,11 +28,13 @@ public class SoldiersGeneral : MonoBehaviour
 
     void FixedUpdate()
     {
+        //Recalculate
+        rotate();
+        Invoke("checkEnemy", 0.5f);
 
         //Checks
         isAlive = (health > 0) ? true : false;
-        Invoke("checkEnemy", 0.5f);
-        if (!isAlive) Invoke("destroySoldier", 3f);
+        if (!isAlive) die();
 
         //Animations
         Animator.SetBool("isAlive", isAlive);
@@ -52,9 +58,29 @@ public class SoldiersGeneral : MonoBehaviour
         }
     }
 
+    private void die()
+    {
+       Destroy(Rigidbody2D);
+       Invoke("destroySoldier", 3f);
+       Destroy(capsuleCollider);
+    }
+
     void checkEnemy()
     {
         seeEnemy = (this.transform.position.x + -(visionRange) > LogicalMarco.directionAbs.x) ? false : true;
+    }
+
+    //Function to Recalculate the orientation of the Enemy
+    private void rotate()
+    {
+        if (LogicalMarco.directionAbs.x > this.transform.position.x)
+        {
+            transform.localScale = new Vector3(-1.2f, 1.2f, 1.2f);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+        }
     }
 
 

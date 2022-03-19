@@ -14,6 +14,7 @@ public class SoldierGunScript : MonoBehaviour
 
     void Update()
     {
+
         // Checks
         if (RunSoldier.seeMarco && Time.time >= nextShoot) shoot();
     }
@@ -26,6 +27,4 @@ public class SoldierGunScript : MonoBehaviour
         nextShoot = Time.time + cooldownShot;
 
     }
-
-
 }

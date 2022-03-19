@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ScreamAndRun : MonoBehaviour
 {
+    //Components
     private Animator Animator;
     private Rigidbody2D Rigidbody2D;
     private bool screamAndRun;
 
     void Start()
     {
+        //Initialize Components
         Animator = GetComponent<Animator>();   
         Rigidbody2D = GetComponent<Rigidbody2D>();  
     }
@@ -21,6 +23,7 @@ public class ScreamAndRun : MonoBehaviour
         if (screamAndRun) run();
     }
 
+    //Function to Run if See Marco
     private void run()
     {
         if(this.transform.position.x <0.0f) transform.localScale = new Vector3(1.2f, 1.2f, 1f);

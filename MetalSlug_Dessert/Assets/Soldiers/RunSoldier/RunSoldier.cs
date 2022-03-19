@@ -9,11 +9,14 @@ public class RunSoldier : MonoBehaviour
     private float distanceToShoot, velocity;
     //Components
     private Rigidbody2D Rigidbody2D;
+    //Static Variables
+    private SoldierGunScript SoldierGunScript;
 
     void Start()
     {
         //Initialize Variables
-        Rigidbody2D = GetComponent<Rigidbody2D>();  
+        Rigidbody2D = GetComponent<Rigidbody2D>();
+        SoldierGunScript = gameObject.GetComponent<SoldierGunScript>();
         distanceToShoot = 2.5f;
         velocity = 0.2f;
     }
@@ -22,17 +25,13 @@ public class RunSoldier : MonoBehaviour
     {
         //Recalculate
         seeEnemy();
-        rotate();
 
         //Checks
         if (!seeMarco) lookForMarco(); 
+        if(!SoldiersGeneral.isAlive) SoldierGunScript.enabled = false;
     }
 
-    //Function to Recalculate the orientation of the Enemy
-    private void rotate()
-    {
-        if (LogicalMarco.directionAbs.x > this.transform.position.x) transform.localScale = new Vector3(-1.2f, 1.2f, 1.2f); else transform.localScale = new Vector3(1.2f, 1.2f, 1.2f); ;    
-    }
+
 
     //Function that detect if Marco is close
     private void seeEnemy()

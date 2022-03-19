@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class FireBulletArmor : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         Invoke("destroyExplosion", 1f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         

@@ -4,18 +4,6 @@ using UnityEngine;
 
 public class TelephoneSoldier : MonoBehaviour
 {
-    private bool atackMode;
-
-
-    void Start()
-    {
-    }
-
-    void Update()
-    {
-
-
-    }
 
 
 
