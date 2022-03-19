@@ -65,18 +65,20 @@
     <Compile Include="Assets\OtherSprites\Vehicles\EnterToArmor.cs" />
     <Compile Include="Assets\OtherSprites\Vehicles\Armor1.cs" />
     <Compile Include="Assets\Soldiers\SoldierDefault\Scripts\SoldiersGeneral.cs" />
+    <Compile Include="Assets\VanScript.cs" />
     <Compile Include="Assets\Soldiers\SoldierFireCamp\ScreamAndRun.cs" />
     <Compile Include="Assets\Scripts\Bullets\ArmorBullet.cs" />
     <Compile Include="Assets\Scripts\Bullets\BulletSoldier.cs" />
     <Compile Include="Assets\OtherSprites\SFX\Blood\bloodScr.cs" />
     <Compile Include="Assets\Scripts\Bullets\DefaultBullet.cs" />
     <Compile Include="Assets\Scripts\Weapons\MeleeAtack.cs" />
+    <Compile Include="Assets\sandbagScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\DefaultGunScript.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\OtherSprites\Vehicles\InArmor.cs" />
     <Compile Include="Assets\campFireScript.cs" />
-    <Compile Include="Assets\VanScript.cs" />
-    <Compile Include="Assets\sandbagScript.cs" />
+    <Compile Include="Assets\World\EnablePlataforms.cs" />
+    <Compile Include="Assets\PlataformScripts.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

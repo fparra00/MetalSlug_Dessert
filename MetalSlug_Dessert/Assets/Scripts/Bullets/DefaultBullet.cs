@@ -35,5 +35,13 @@ public class DefaultBullet : MonoBehaviour
         {
             destroyBullet();
         }
+
+        if (collision.gameObject != null  && !collision.gameObject.CompareTag("Player")) destroyBullet();
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject != null) destroyBullet();
     }
 }
