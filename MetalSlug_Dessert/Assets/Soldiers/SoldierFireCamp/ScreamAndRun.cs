@@ -29,7 +29,6 @@ public class ScreamAndRun : MonoBehaviour
         //Checks
         if(seeEnemy) screamAndRun = true;
         if (screamAndRun) run();
-        Debug.Log(seeEnemy);
     }
 
     //Function to Run if See Marco

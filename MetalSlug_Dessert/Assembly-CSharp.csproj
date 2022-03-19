@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\OtherSprites\Vehicles\InArmor.cs" />
     <Compile Include="Assets\PreFabs\Bullet\RPGScript.cs" />
+    <Compile Include="Assets\campFireScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

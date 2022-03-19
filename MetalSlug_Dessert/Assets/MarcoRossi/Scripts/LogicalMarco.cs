@@ -19,13 +19,15 @@ public class LogicalMarco : MonoBehaviour
     private float x, y;
     public static Vector2 direction;
     public static Vector2 directionAbs;
+    public static Vector2 posInicial;
     public static Renderer renderer;
 
     [Header("Static bools to control actions of Marco in Another Scripts")]
-    public static bool isRunning, isJumping, isGrounded, isDucking, isWalkWhileDuck, isShootingWhileDuck, isShooting, isRazing, isInVehicle;
+    public static bool isRunning, isJumping, isGrounded, isDucking, isWalkWhileDuck, isShootingWhileDuck, isShooting, isRazing, isInVehicle, isInPosInicial;
 
     void Start()
     {
+        posInicial = GameObject.Find("SpotMarco").transform.position;
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         renderer = GetComponent<Renderer>();
@@ -35,6 +37,7 @@ public class LogicalMarco : MonoBehaviour
     {
         Rigidbody2D.velocity = new Vector2(x * velocity, Rigidbody2D.velocity.y);
         if (isWalkWhileDuck) Rigidbody2D.velocity = new Vector2(x * velocity/2, Rigidbody2D.velocity.y);
+        if (!isInPosInicial) Rigidbody2D.velocity = new Vector2(1f * velocity/2, Rigidbody2D.velocity.y);
     }
 
     void Update()
@@ -47,13 +50,14 @@ public class LogicalMarco : MonoBehaviour
         isRunning = x != 0.0f && isGrounded && !isJumping && !isDucking;
         isWalkWhileDuck = isDucking && x != 0.0f;
         isShootingWhileDuck = isDucking && isShooting;
+        if (!isInPosInicial) isRunning = true;
 
         //Inputs
         isJumping = Input.GetKeyDown(KeyCode.W) && isGrounded && !isDucking ? true : false;
         isDucking = Input.GetKey(KeyCode.S);
         isShooting = Input.GetKeyDown(KeyCode.Space) && !isInVehicle;
-        isRazing = Input.GetKeyDown(KeyCode.F); 
-
+        isRazing = Input.GetKeyDown(KeyCode.F);
+        isInPosInicial = (transform.position.x < posInicial.x) ? false : true;
         //Animator
         Animator.SetBool("isJumping",isJumping);
         Animator.SetBool("isRunning",isRunning);
