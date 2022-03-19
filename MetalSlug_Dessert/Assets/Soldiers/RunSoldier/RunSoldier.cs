@@ -26,16 +26,12 @@ public class RunSoldier : MonoBehaviour
 
         //Checks
         if (!seeMarco) lookForMarco(); 
- 
     }
 
     //Function to Recalculate the orientation of the Enemy
     private void rotate()
     {
-        Vector3 lookLeft = new Vector3(1.2f, 1.2f, 1.2f);
-        Vector3 lookRight = new Vector3(-1.2f, 1.2f, 1.2f);
-
-        if (LogicalMarco.directionAbs.x > this.transform.position.x) transform.localScale = lookRight; else transform.localScale = lookLeft;    
+        if (LogicalMarco.directionAbs.x > this.transform.position.x) transform.localScale = new Vector3(-1.2f, 1.2f, 1.2f); else transform.localScale = new Vector3(1.2f, 1.2f, 1.2f); ;    
     }
 
     //Function that detect if Marco is close

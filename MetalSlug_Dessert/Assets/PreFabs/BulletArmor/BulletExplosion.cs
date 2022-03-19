@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class BulletExplosion : MonoBehaviour
 {
+    //Internal Variables
     [SerializeField] private float speed;
     [SerializeField] private float damage;
     [SerializeField] private float explosionRadio;
     [SerializeField] private GameObject prExplosion;
-
+    //Components
     private Rigidbody2D rb;
     private Vector2 dirBullet;
 

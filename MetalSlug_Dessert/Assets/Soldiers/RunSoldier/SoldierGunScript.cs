@@ -15,13 +15,7 @@ public class SoldierGunScript : MonoBehaviour
     void Update()
     {
         // Checks
-        if (RunSoldier.seeMarco && Time.time >= nextShoot)
-        {
-            shoot();
-            nextShoot = Time.time + cooldownShot;
-        }
-
-
+        if (RunSoldier.seeMarco && Time.time >= nextShoot) shoot();
     }
 
 
@@ -29,7 +23,9 @@ public class SoldierGunScript : MonoBehaviour
     private void shoot()
     {
         Instantiate(bullet, gunPosition.position, gunPosition.rotation);
+        nextShoot = Time.time + cooldownShot;
+
     }
 
-    
+
 }
