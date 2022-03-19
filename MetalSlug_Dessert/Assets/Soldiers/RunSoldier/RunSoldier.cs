@@ -9,6 +9,7 @@ public class RunSoldier : MonoBehaviour
     private float distanceToShoot, velocity;
     //Components
     private Rigidbody2D Rigidbody2D;
+    private Animator animator;  
     //Static Variables
     private SoldierGunScript SoldierGunScript;
 
@@ -17,7 +18,8 @@ public class RunSoldier : MonoBehaviour
         //Initialize Variables
         Rigidbody2D = GetComponent<Rigidbody2D>();
         SoldierGunScript = gameObject.GetComponent<SoldierGunScript>();
-        distanceToShoot = 2.5f;
+        animator = GetComponent<Animator>();    
+        distanceToShoot = 2f;
         velocity = 0.2f;
     }
 
@@ -29,6 +31,9 @@ public class RunSoldier : MonoBehaviour
         //Checks
         if (!seeMarco) lookForMarco(); 
         if(!SoldiersGeneral.isAlive) SoldierGunScript.enabled = false;
+
+        //Animator
+        animator.SetBool("shoot", seeMarco);
     }
 
 

@@ -40,5 +40,10 @@ public class BulletSoldier : MonoBehaviour
         {
             destroyBullet();
         }
+        //If Collision with Armor type1
+        if (collision.CompareTag("Armor"))
+        {
+            Armor1.health--;
+        }
     }
 }

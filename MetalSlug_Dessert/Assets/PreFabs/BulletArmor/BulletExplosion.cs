@@ -49,7 +49,14 @@ public class BulletExplosion : MonoBehaviour
             destroyBullet();
         }
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Soldier"))
+        {
+            explosion();
+            destroyBullet();
+        }
+    }
 
     private void destroyBullet()
     {

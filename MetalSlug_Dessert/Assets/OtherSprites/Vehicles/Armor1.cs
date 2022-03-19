@@ -18,15 +18,17 @@ public class Armor1 : MonoBehaviour
     [SerializeField] private Transform gunPosition;
 
     //Auxiliar Variables
-    private bool isIdleUp, isShooting, isFlying, exitVehicle, isGrounded;
+    private bool isIdleUp, isShooting, isFlying, exitVehicle, isGrounded, isAlive;
     private float x,y;
+    public static int health;
 
     void Start()
     {
         //Initialize Variables
         Animator = GetComponent<Animator>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
-        Collider = GetComponent<CapsuleCollider2D>(); 
+        Collider = GetComponent<CapsuleCollider2D>();
+        health = 3;
         Animator.SetBool("enterToArmor", true);
         LogicalMarco.isInVehicle = true;    
     }
@@ -35,15 +37,16 @@ public class Armor1 : MonoBehaviour
     {
         //Recalculate
         Invoke("rotateArmorAndMovement", 2f);
-
+        MarcoMovement.transform.position = spotMarco.transform.position;
+        Debug.Log(health + " "+isAlive);
         //Checks
         isIdleUp = (x == 0.0f) ? true : false;
+        isAlive = (health > 0) ? true : false;
         if (isShooting) shoot();
         if (isFlying) fly();
         if (isFlying && !isIdleUp) isIdleUp = true;
         if (isFlying && !isIdleUp) isFlying=true;
         if (exitVehicle && isGrounded) exitArmor();
-        if(!LogicalMarco.isInVehicle) MarcoMovement.transform.position = spotMarco.transform.position;
 
         //Inputs
         isShooting = Input.GetKeyDown(KeyCode.Space);
@@ -76,11 +79,13 @@ public class Armor1 : MonoBehaviour
     //Function to Exit the Armor
     private void exitArmor()
     {
+
         Animator.SetBool("exitVehicle", exitVehicle);
         LogicalMarco.isInVehicle = false;
         Destroy(Rigidbody2D);
         MarcoMovement.transform.position = this.transform.position;
         spotMarco.transform.position = new Vector3(spotMarco.transform.position.x+1f, spotMarco.transform.position.y + 0.30f, spotMarco.transform.position.z);
+        MarcoMovement.transform.position = spotMarco.transform.position;
 
         Invoke("destroyArmor", 2f);
     }

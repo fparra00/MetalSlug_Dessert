@@ -30,7 +30,7 @@ public class SoldiersGeneral : MonoBehaviour
     {
         //Recalculate
         rotate();
-        Invoke("checkEnemy", 0.5f);
+        checkEnemy();
 
         //Checks
         isAlive = (health > 0) ? true : false;
@@ -38,6 +38,7 @@ public class SoldiersGeneral : MonoBehaviour
 
         //Animations
         Animator.SetBool("isAlive", isAlive);
+
     }
 
 

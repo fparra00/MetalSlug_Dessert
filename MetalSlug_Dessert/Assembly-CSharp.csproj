@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\PreFabs\BulletArmor\BulletExplosion.cs" />
+    <Compile Include="Assets\Soldiers\RunSoldier\SoldierGunScript.cs" />
     <Compile Include="Assets\MarcoRossi\Scripts\LogicalMarco.cs" />
     <Compile Include="Assets\Soldiers\RunSoldier\RunSoldier.cs" />
     <Compile Include="Assets\PreFabs\BulletArmor\ExplosionBulletScript.cs" />
@@ -66,12 +67,12 @@
     <Compile Include="Assets\Scripts\Bullets\ArmorBullet.cs" />
     <Compile Include="Assets\Scripts\Bullets\BulletSoldier.cs" />
     <Compile Include="Assets\OtherSprites\SFX\Blood\bloodScr.cs" />
+    <Compile Include="Assets\Scripts\Bullets\DefaultBullet.cs" />
     <Compile Include="Assets\Scripts\Weapons\MeleeAtack.cs" />
     <Compile Include="Assets\Scripts\Weapons\DefaultGunScript.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\OtherSprites\Vehicles\InArmor.cs" />
-    <Compile Include="Assets\Soldiers\RunSoldier\SoldierGunScript.cs" />
-    <Compile Include="Assets\Scripts\Bullets\DefaultBullet.cs" />
+    <Compile Include="Assets\PreFabs\GenerateSoldiers\generateSoldiers.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

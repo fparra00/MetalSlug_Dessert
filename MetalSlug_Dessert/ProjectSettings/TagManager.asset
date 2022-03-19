@@ -9,6 +9,8 @@ TagManager:
   - Soldier
   - FloorTrigger
   - bulletArmor
+  - bulletSoldier
+  - Armor
   layers:
   - Default
   - TransparentFX
