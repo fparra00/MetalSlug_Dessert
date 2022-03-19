@@ -19,13 +19,15 @@ public class ScreamAndRun : MonoBehaviour
         //Initialize Variables
         seeEnemy = false;
         screamAndRun = false;
-        visionRange = 2f;
+        visionRange =2f;
     }
+
 
     void Update()
     {
         //Recalculate
-        checkEnemy();
+        Invoke("checkEnemy", 0.5f);
+
         //Checks
         if(seeEnemy) screamAndRun = true;
         if (screamAndRun) run();
