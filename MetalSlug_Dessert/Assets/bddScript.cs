@@ -18,7 +18,6 @@ public class bddScript : MonoBehaviour
         dbconn = (IDbConnection)new SqliteConnection(conn);
         dbconn.Open();
         IDbCommand dbcmd = dbconn.CreateCommand();
-        Debug.Log(iniciales);
         string sqlQuery = "insert into MSlug(Initials) values ('"+iniciales+"')";
         dbcmd.CommandText = sqlQuery;
         int escrituras = dbcmd.ExecuteNonQuery();
@@ -33,6 +32,7 @@ public class bddScript : MonoBehaviour
     {
         string sqlQuery = "SELECT Initials FROM MSlug WHERE ID = (SELECT MAX(ID) FROM MSlug)";
         String conn = "URI=file:" + Application.dataPath + "/Bdd/Mslug.db";
+        String initials="";
         IDbConnection dbconn;
         dbconn = (IDbConnection)new SqliteConnection(conn);
         dbconn.Open(); //Open connection to the database.
@@ -43,10 +43,10 @@ public class bddScript : MonoBehaviour
 
         while (reader.Read())
         {
-            string initials = reader.GetString(1);
-
-         Debug.Log(initials);
+        initials = reader.GetString(1);
         }
+        Debug.Log(initials);
+
 
         reader.Close();
         reader = null;
