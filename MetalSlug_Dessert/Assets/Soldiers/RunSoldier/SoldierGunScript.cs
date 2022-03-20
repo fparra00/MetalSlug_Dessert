@@ -24,8 +24,7 @@ public class SoldierGunScript : MonoBehaviour
 
         // Checks
         if (RunSoldier.seeMarco && Time.time >= nextShoot)
-        {
-           
+        {  
             isShooting = true;
         } else
         {

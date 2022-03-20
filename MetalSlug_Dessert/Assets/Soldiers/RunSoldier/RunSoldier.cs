@@ -31,7 +31,6 @@ public class RunSoldier : MonoBehaviour
         //Checks
         if (!seeMarco) lookForMarco(); 
         if(!SoldiersGeneral.isAlive) SoldierGunScript.enabled = false;
-
         //Animator
         animator.SetBool("shoot", seeMarco);
     }
