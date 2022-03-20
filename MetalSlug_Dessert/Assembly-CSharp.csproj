@@ -56,6 +56,7 @@
     <Compile Include="Assets\PreFabs\BulletArmor\BulletExplosion.cs" />
     <Compile Include="Assets\Soldiers\RunSoldier\SoldierGunScript.cs" />
     <Compile Include="Assets\PreFabs\GenerateSoldiers\generateSoldiers.cs" />
+    <Compile Include="Assets\World\EnablePlataforms.cs" />
     <Compile Include="Assets\MarcoRossi\Scripts\LogicalMarco.cs" />
     <Compile Include="Assets\Soldiers\RunSoldier\RunSoldier.cs" />
     <Compile Include="Assets\PreFabs\Bullet\RPGScript.cs" />
@@ -73,12 +74,14 @@
     <Compile Include="Assets\Scripts\Bullets\DefaultBullet.cs" />
     <Compile Include="Assets\Scripts\Weapons\MeleeAtack.cs" />
     <Compile Include="Assets\sandbagScript.cs" />
+    <Compile Include="Assets\World\Indigente\HomelessScript.cs" />
     <Compile Include="Assets\Scripts\Weapons\DefaultGunScript.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\OtherSprites\Vehicles\InArmor.cs" />
     <Compile Include="Assets\campFireScript.cs" />
-    <Compile Include="Assets\World\EnablePlataforms.cs" />
-    <Compile Include="Assets\PlataformScripts.cs" />
+    <Compile Include="Assets\World\Indigente\Anim.cs" />
+    <Compile Include="Assets\CameraController.cs" />
+    <Compile Include="Assets\goStage2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

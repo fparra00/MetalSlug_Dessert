@@ -20,10 +20,12 @@ public class SoldierGunScript : MonoBehaviour
     }
     void Update()
     {
+        Animator.SetBool("shoot", isShooting);
+
         // Checks
         if (RunSoldier.seeMarco && Time.time >= nextShoot)
         {
-            shoot();
+           
             isShooting = true;
         } else
         {
@@ -35,7 +37,6 @@ public class SoldierGunScript : MonoBehaviour
     //Function to Instantiate a Bullet in the position of the gun
     private void shoot()
     {
-        Animator.SetBool("shoot", isShooting);
         Instantiate(bullet, gunPosition.position, gunPosition.rotation);
         nextShoot = Time.time + cooldownShot;
     }
