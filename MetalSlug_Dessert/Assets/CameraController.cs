@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
 
 
-	private static Vector3 position;
+	private static Vector3 position = new Vector3(1.29f, 0.73f, -10.47f);
 
 	void Start()
 	{
@@ -14,6 +14,7 @@ public class CameraController : MonoBehaviour
 
 	void LateUpdate()
 	{
+		transform.position = position;
 	}
 
 	public static void goToStage2()
