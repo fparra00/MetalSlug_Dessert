@@ -1,0 +1,552 @@
+fileFormatVersion: 2
+guid: cf6bb35fd5e2ddb4d8539292e710cccf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8559502582592565984
+    second: MarcoDead_0
+  - first:
+      213: -2592157182380043826
+    second: MarcoDead_1
+  - first:
+      213: -6028082173499223958
+    second: MarcoDead_2
+  - first:
+      213: -5589865295138484309
+    second: MarcoDead_3
+  - first:
+      213: 1838301531898601913
+    second: MarcoDead_4
+  - first:
+      213: -1626383166948245189
+    second: MarcoDead_5
+  - first:
+      213: 1584417174978144859
+    second: MarcoDead_6
+  - first:
+      213: 2997107987429749124
+    second: MarcoDead_7
+  - first:
+      213: 8677145055027873257
+    second: MarcoDead_8
+  - first:
+      213: -6290932912058518845
+    second: MarcoDead_9
+  - first:
+      213: 971834294887581881
+    second: MarcoDead_10
+  - first:
+      213: -3309023109133554927
+    second: MarcoDead_11
+  - first:
+      213: 4415419040092042241
+    second: MarcoDead_12
+  - first:
+      213: 7187763703000615433
+    second: MarcoDead_13
+  - first:
+      213: -7811839320793145172
+    second: MarcoDead_14
+  - first:
+      213: -9131266850147392110
+    second: MarcoDead_15
+  - first:
+      213: 429963544316035851
+    second: MarcoDead_16
+  - first:
+      213: -1623604837323935886
+    second: MarcoDead_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MarcoDead_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 13
+        width: 28
+        height: 36
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2f779af3679c670800000000000000
+      internalID: 8559502582592565984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 13
+        width: 31
+        height: 34
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec19246c6cec60cd0800000000000000
+      internalID: -2592157182380043826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 15
+        width: 31
+        height: 32
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60d6bb8333f75ca0800000000000000
+      internalID: -6028082173499223958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 15
+        width: 39
+        height: 30
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf8cf4612fcc62b0800000000000000
+      internalID: -5589865295138484309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_4
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 19
+        width: 38
+        height: 26
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b16fd6e085f28910800000000000000
+      internalID: 1838301531898601913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_5
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 23
+        width: 38
+        height: 21
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b310069602ded69e0800000000000000
+      internalID: -1626383166948245189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_6
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 20
+        width: 35
+        height: 25
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5aa99aa60bfcf510800000000000000
+      internalID: 1584417174978144859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 16
+        width: 34
+        height: 29
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4817c30d5ddd79920800000000000000
+      internalID: 2997107987429749124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_8
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 15
+        width: 31
+        height: 30
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5497d34796b6870800000000000000
+      internalID: 8677145055027873257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_9
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 15
+        width: 23
+        height: 30
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c230f6e8dd12b8a0800000000000000
+      internalID: -6290932912058518845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_10
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 15
+        width: 26
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b801576426ac7d00800000000000000
+      internalID: 971834294887581881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_11
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 15
+        width: 29
+        height: 27
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b2982a30df312d0800000000000000
+      internalID: -3309023109133554927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_12
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 15
+        width: 30
+        height: 29
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104be2b1938b64d30800000000000000
+      internalID: 4415419040092042241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_13
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 15
+        width: 27
+        height: 30
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a4cc6610110c360800000000000000
+      internalID: 7187763703000615433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 15
+        width: 29
+        height: 30
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca022b1d685c69390800000000000000
+      internalID: -7811839320793145172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_15
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 17
+        width: 36
+        height: 25
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2952aa7ed29374180800000000000000
+      internalID: -9131266850147392110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_16
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 17
+        width: 41
+        height: 14
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b034355c09987f500800000000000000
+      internalID: 429963544316035851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarcoDead_17
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 17
+        width: 44
+        height: 12
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f63bfa00cc779e0800000000000000
+      internalID: -1623604837323935886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

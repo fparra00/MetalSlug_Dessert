@@ -38,7 +38,11 @@ public class SoldiersGeneral : MonoBehaviour
 
         //Animations
         Animator.SetBool("isAlive", isAlive);
+    }
 
+    private void Update()
+    {
+     Animator.SetBool("marcoIsDead", !LogicalMarco.isAlive);
     }
 
 
@@ -103,4 +107,6 @@ public class SoldiersGeneral : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+
 }

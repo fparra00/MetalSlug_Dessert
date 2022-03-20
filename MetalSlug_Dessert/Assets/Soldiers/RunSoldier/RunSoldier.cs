@@ -20,21 +20,22 @@ public class RunSoldier : MonoBehaviour
         SoldierGunScript = gameObject.GetComponent<SoldierGunScript>();
         animator = GetComponent<Animator>();    
         distanceToShoot = 2f;
-        velocity = 0.2f;
+        velocity = 0.1f;
     }
 
-    void Update()
+
+    void FixedUpdate()
     {
         //Recalculate
-        seeEnemy();
+        Invoke("seeEnemy", 0.5f);
 
         //Checks
         if (!seeMarco) lookForMarco(); 
         if(!SoldiersGeneral.isAlive) SoldierGunScript.enabled = false;
+
         //Animator
         animator.SetBool("shoot", seeMarco);
     }
-
 
 
     //Function that detect if Marco is close

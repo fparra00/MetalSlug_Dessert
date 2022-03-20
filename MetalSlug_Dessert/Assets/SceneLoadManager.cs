@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 public class SceneLoadManager : MonoBehaviour
 {
     private Animator animator;
+    private GameObject canvasInitials;
 
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();    
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class SceneLoadManager : MonoBehaviour
         if (collision.CompareTag("Player")) loadScene();
     }
 
-    private void loadScene()
+    public void loadScene()
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex +1;
         StartCoroutine(SceneLoad(nextSceneIndex));
@@ -30,8 +31,9 @@ public class SceneLoadManager : MonoBehaviour
 
     public IEnumerator SceneLoad(int sceneIndex)
     {
-        animator.SetTrigger("startTransition");
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(sceneIndex);
     }
+
+
 }

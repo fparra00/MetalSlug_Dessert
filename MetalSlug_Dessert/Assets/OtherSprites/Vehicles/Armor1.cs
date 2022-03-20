@@ -38,7 +38,7 @@ public class Armor1 : MonoBehaviour
         //Recalculate
         Invoke("rotateArmorAndMovement", 2f);
         MarcoMovement.transform.position = spotMarco.transform.position;
-        Debug.Log(health + " "+isAlive);
+
         //Checks
         isIdleUp = (x == 0.0f) ? true : false;
         isAlive = (health > 0) ? true : false;

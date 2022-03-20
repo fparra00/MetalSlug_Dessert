@@ -17,5 +17,5 @@ public class ChangeSceneScript : MonoBehaviour
 
     }
 
-    private void changeScene() => SceneManager.LoadScene("SampleScene");
+    private void changeScene() => SceneManager.LoadScene("ScreneInitials");
 }

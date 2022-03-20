@@ -23,7 +23,7 @@ public class LogicalMarco : MonoBehaviour
     public static Renderer renderer;
 
     [Header("Static bools to control actions of Marco in Another Scripts")]
-    public static bool isRunning, isJumping, isGrounded, isDucking, isWalkWhileDuck, isShootingWhileDuck, isShooting, isRazing, isInVehicle, isInPosInicial;
+    public static bool isRunning, isJumping, isGrounded, isDucking, isWalkWhileDuck, isShootingWhileDuck, isShooting, isRazing, isInVehicle, isInPosInicial, isAlive;
 
     void Start()
     {
@@ -45,12 +45,14 @@ public class LogicalMarco : MonoBehaviour
         //Variables that need recalculation
         recalculateOrientation();
         directionAbs = new Vector2(transform.position.x, transform.position.y);
-
+        isAlive = (health> 0) ? true : false;
+    
         //Checks
         isRunning = x != 0.0f && isGrounded && !isJumping && !isDucking;
         isWalkWhileDuck = isDucking && x != 0.0f;
         isShootingWhileDuck = isDucking && isShooting;
         if (!isInPosInicial) isRunning = true;
+        if (!isAlive) die();
 
         //Inputs
         isJumping = Input.GetKeyDown(KeyCode.W) && isGrounded && !isDucking ? true : false;
@@ -58,6 +60,7 @@ public class LogicalMarco : MonoBehaviour
         isShooting = Input.GetKeyDown(KeyCode.Space) && !isInVehicle;
         isRazing = Input.GetKeyDown(KeyCode.F);
         isInPosInicial = (transform.position.x < posInicial.x) ? false : true;
+
         //Animator
         Animator.SetBool("isJumping",isJumping);
         Animator.SetBool("isRunning",isRunning);
@@ -66,6 +69,7 @@ public class LogicalMarco : MonoBehaviour
         Animator.SetBool("isShooting", isShooting);
         Animator.SetBool("isShootingWhileDuck", isShootingWhileDuck);
         Animator.SetBool("isRazing", isRazing);
+        Animator.SetBool("isAlive", isAlive);
 
         //Actions
         if (isJumping) jump();
@@ -86,11 +90,28 @@ public class LogicalMarco : MonoBehaviour
         }
     }
 
+    //Function to Recalculate the Health in relation with a Collision Bullet
+    private void hitWithBullet()
+    {
+        health--;
+    }
 
     //Function to Jump
     private void jump()
     {
         Rigidbody2D.AddForce(Vector2.up * jumpForce);
+    }
+
+    //Function to Destroy Marco (Die)
+    private void die()
+    {
+        this.enabled = false;
+        Invoke("destroyMarco", 4f);
+    }
+
+    private void destroyMarco()
+    {
+        Destroy(gameObject);
     }
 
    //onCollisionEnter
@@ -103,5 +124,11 @@ public class LogicalMarco : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = (collision.gameObject.CompareTag("Floor")) ? false : true;
+    }
+
+    //onTriggerEnter
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("bulletSoldier")) hitWithBullet();
     }
 }
