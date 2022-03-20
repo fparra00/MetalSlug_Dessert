@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\PreFabs\BulletArmor\BulletExplosion.cs" />
     <Compile Include="Assets\Soldiers\RunSoldier\SoldierGunScript.cs" />
+    <Compile Include="Assets\generateSol.cs" />
     <Compile Include="Assets\PreFabs\GenerateSoldiers\generateSoldiers.cs" />
     <Compile Include="Assets\World\EnablePlataforms.cs" />
     <Compile Include="Assets\CameraController.cs" />
@@ -82,7 +83,9 @@
     <Compile Include="Assets\OtherSprites\Vehicles\InArmor.cs" />
     <Compile Include="Assets\campFireScript.cs" />
     <Compile Include="Assets\World\Indigente\Anim.cs" />
-    <Compile Include="Assets\generateSol.cs" />
+    <Compile Include="Assets\SceneLoadManager.cs" />
+    <Compile Include="Assets\Scenes\IntroAssets\IntroScript.cs" />
+    <Compile Include="Assets\Scenes\IntroAssets\ChangeSceneScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
