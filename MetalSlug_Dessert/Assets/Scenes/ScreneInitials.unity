@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 348223073}
   - component: {fileID: 348223072}
   m_Layer: 5
-  m_Name: Text
+  m_Name: txtUsu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 1539120235}
   - component: {fileID: 1539120234}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: InputFieldUsu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1003,6 +1003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8e367eed8402c409f47c71c6895e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iniciales: 
 --- !u!4 &1611034393
 Transform:
   m_ObjectHideFlags: 0

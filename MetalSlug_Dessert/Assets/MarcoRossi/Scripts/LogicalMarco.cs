@@ -17,6 +17,8 @@ public class LogicalMarco : MonoBehaviour
     [SerializeField] private float health;
 
     private float x, y;
+    private AudioSource aud;
+
     public static Vector2 direction;
     public static Vector2 directionAbs;
     public static Vector2 posInicial;
@@ -31,6 +33,7 @@ public class LogicalMarco : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         renderer = GetComponent<Renderer>();
+        aud = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -53,6 +56,8 @@ public class LogicalMarco : MonoBehaviour
         isShootingWhileDuck = isDucking && isShooting;
         if (!isInPosInicial) isRunning = true;
         if (!isAlive) die();
+        if(isShooting) aud.Play();
+
 
         //Inputs
         isJumping = Input.GetKeyDown(KeyCode.W) && isGrounded && !isDucking ? true : false;

@@ -13,6 +13,7 @@ public class SoldiersGeneral : MonoBehaviour
     private Animator Animator;
     private Rigidbody2D Rigidbody2D;
     private CapsuleCollider2D capsuleCollider;
+    private AudioSource aud;
 
     public static bool seeEnemy, isAlive;
 
@@ -22,6 +23,7 @@ public class SoldiersGeneral : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();    
         Animator = GetComponent<Animator>();
+        aud = GetComponent<AudioSource>();  
         seeEnemy = false;
         isAlive = true;
     }
@@ -65,10 +67,12 @@ public class SoldiersGeneral : MonoBehaviour
 
     private void die()
     {
+       aud.Play();
        Destroy(Rigidbody2D);
        Invoke("destroySoldier", 3f);
        Destroy(capsuleCollider);
     }
+
 
     void checkEnemy()
     {
